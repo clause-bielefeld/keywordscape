@@ -1,0 +1,97 @@
+INFO  [2021-02-23 09:46:12,216] io.dropwizard.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2021-02-23 09:46:12,218] io.dropwizard.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2021-02-23 09:46:12,219] io.dropwizard.assets.AssetsBundle: Registering AssetBundle with name: grobidAssets for path /*
+INFO  [2021-02-23 09:46:12,396] com.hubspot.dropwizard.guicier.DropwizardModule: Added guice injected health check: org.grobid.service.resources.HealthResource
+INFO  [2021-02-23 09:46:12,400] org.grobid.service.GrobidRestService: Initiating Servlet GrobidRestService
+INFO  [2021-02-23 09:46:12,400] org.grobid.core.main.LibraryLoader: Loading external native sequence labelling library
+INFO  [2021-02-23 09:46:12,400] org.grobid.core.main.LibraryLoader: Loading Wapiti native library...
+INFO  [2021-02-23 09:46:12,401] org.grobid.core.main.LibraryLoader: Native library for sequence labelling loaded
+INFO  [2021-02-23 09:46:12,402] org.grobid.core.lexicon.Lexicon: Initiating dictionary
+INFO  [2021-02-23 09:46:12,402] org.grobid.core.lexicon.Lexicon: End of Initialization of dictionary
+INFO  [2021-02-23 09:46:12,402] org.grobid.core.lexicon.Lexicon: Initiating names
+INFO  [2021-02-23 09:46:12,402] org.grobid.core.lexicon.Lexicon: End of initialization of names
+INFO  [2021-02-23 09:46:12,650] org.grobid.core.lexicon.Lexicon: Initiating country codes
+INFO  [2021-02-23 09:46:12,651] org.grobid.core.lexicon.Lexicon: End of initialization of country codes
+INFO  [2021-02-23 09:46:12,705] org.grobid.core.factory.GrobidPoolingFactory: Number of Engines in pool active/max: 1/10
+INFO  [2021-02-23 09:46:12,705] org.grobid.service.GrobidRestService: Initiating of Servlet GrobidRestService finished.
+INFO  [2021-02-23 09:46:12,707] com.hubspot.dropwizard.guicier.DropwizardModule: Registering org.grobid.service.resources.HealthResource as a root resource class
+INFO  [2021-02-23 09:46:12,707] com.hubspot.dropwizard.guicier.DropwizardModule: Registering org.grobid.service.GrobidRestService as a root resource class
+INFO  [2021-02-23 09:46:12,708] com.hubspot.dropwizard.guicier.DropwizardModule: Registering org.grobid.service.exceptions.mapper.GrobidServiceExceptionMapper as a provider class
+INFO  [2021-02-23 09:46:12,708] com.hubspot.dropwizard.guicier.DropwizardModule: Registering org.grobid.service.exceptions.mapper.GrobidExceptionsTranslationUtility as a provider class
+INFO  [2021-02-23 09:46:12,708] com.hubspot.dropwizard.guicier.DropwizardModule: Registering org.grobid.service.exceptions.mapper.GrobidExceptionMapper as a provider class
+INFO  [2021-02-23 09:46:12,708] com.hubspot.dropwizard.guicier.DropwizardModule: Registering org.grobid.service.exceptions.mapper.WebApplicationExceptionMapper as a provider class
+INFO  [2021-02-23 09:46:12,709] org.grobid.service.main.GrobidServiceApplication: Service config=GrobidServiceConfiguration{server=DefaultServerFactory{applicationConnectors=[io.dropwizard.jetty.HttpConnectorFactory@27ace0b1], adminConnectors=[io.dropwizard.jetty.HttpConnectorFactory@2b61a019], adminMaxThreads=64, adminMinThreads=1, applicationContextPath=/, adminContextPath=/}, logging=DefaultLoggingFactory{level=INFO, loggers={org.apache.pdfbox.pdmodel.font.PDSimpleFont="OFF"}, appenders=[io.dropwizard.logging.ConsoleAppenderFactory@a9f023e, io.dropwizard.logging.FileAppenderFactory@d5af0a5]}, metrics=MetricsFactory{frequency=1 minute, reporters=[]}}
+INFO  [2021-02-23 09:46:12,714] io.dropwizard.server.ServerFactory: Starting grobid-service
+
+ _______  _______  _______  ______  _________ ______     _______  _______  _______          _________ _______  _______
+(  ____ \(  ____ )(  ___  )(  ___ \ \__   __/(  __  \   (  ____ \(  ____ \(  ____ )|\     /|\__   __/(  ____ \(  ____ \
+| (    \/| (    )|| (   ) || (   ) )   ) (   | (  \  )  | (    \/| (    \/| (    )|| )   ( |   ) (   | (    \/| (    \/
+| |      | (____)|| |   | || (__/ /    | |   | |   ) |  | (_____ | (__    | (____)|| |   | |   | |   | |      | (__
+| | ____ |     __)| |   | ||  __ (     | |   | |   | |  (_____  )|  __)   |     __)( (   ) )   | |   | |      |  __)
+| | \_  )| (\ (   | |   | || (  \ \    | |   | |   ) |        ) || (      | (\ (    \ \_/ /    | |   | |      | (
+| (___) || ) \ \__| (___) || )___) )___) (___| (__/  )  /\____) || (____/\| ) \ \__  \   /  ___) (___| (____/\| (____/\
+(_______)|/   \__/(_______)|/ \___/ \_______/(______/   \_______)(_______/|/   \__/   \_/   \_______/(_______/(_______/
+
+
+INFO  [2021-02-23 09:46:12,750] org.eclipse.jetty.setuid.SetUIDListener: Opened application@70f148dc{HTTP/1.1,[http/1.1]}{0.0.0.0:8070}
+INFO  [2021-02-23 09:46:12,750] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@3360283{HTTP/1.1,[http/1.1]}{0.0.0.0:8071}
+INFO  [2021-02-23 09:46:12,751] org.eclipse.jetty.server.Server: jetty-9.4.11.v20180605; built: 2018-06-05T18:24:03.829Z; git: d5fc0523cfa96bfebfbda19606cad384d772f04c; jvm 11.0.9.1+1-post-Debian-1deb10u2
+WARN  [2021-02-23 09:46:12,881] org.glassfish.jersey.internal.inject.Providers: A provider org.grobid.service.exceptions.mapper.GrobidExceptionsTranslationUtility registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.grobid.service.exceptions.mapper.GrobidExceptionsTranslationUtility will be ignored. 
+INFO  [2021-02-23 09:46:13,004] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    POST    /api/annotatePDF (org.grobid.service.GrobidRestService)
+    POST    /api/citationPatentAnnotations (org.grobid.service.GrobidRestService)
+    GET     /api/grobid (org.grobid.service.GrobidRestService)
+    GET     /api/health (org.grobid.service.resources.HealthResource)
+    GET     /api/isalive (org.grobid.service.GrobidRestService)
+    POST    /api/processAffiliations (org.grobid.service.GrobidRestService)
+    PUT     /api/processAffiliations (org.grobid.service.GrobidRestService)
+    POST    /api/processCitation (org.grobid.service.GrobidRestService)
+    PUT     /api/processCitation (org.grobid.service.GrobidRestService)
+    POST    /api/processCitationNames (org.grobid.service.GrobidRestService)
+    PUT     /api/processCitationNames (org.grobid.service.GrobidRestService)
+    POST    /api/processCitationPatentPDF (org.grobid.service.GrobidRestService)
+    POST    /api/processCitationPatentST36 (org.grobid.service.GrobidRestService)
+    POST    /api/processCitationPatentTXT (org.grobid.service.GrobidRestService)
+    POST    /api/processDate (org.grobid.service.GrobidRestService)
+    PUT     /api/processDate (org.grobid.service.GrobidRestService)
+    POST    /api/processFulltextAssetDocument (org.grobid.service.GrobidRestService)
+    PUT     /api/processFulltextAssetDocument (org.grobid.service.GrobidRestService)
+    POST    /api/processFulltextDocument (org.grobid.service.GrobidRestService)
+    PUT     /api/processFulltextDocument (org.grobid.service.GrobidRestService)
+    POST    /api/processHeaderDocument (org.grobid.service.GrobidRestService)
+    PUT     /api/processHeaderDocument (org.grobid.service.GrobidRestService)
+    POST    /api/processHeaderNames (org.grobid.service.GrobidRestService)
+    PUT     /api/processHeaderNames (org.grobid.service.GrobidRestService)
+    POST    /api/processReferences (org.grobid.service.GrobidRestService)
+    PUT     /api/processReferences (org.grobid.service.GrobidRestService)
+    POST    /api/referenceAnnotations (org.grobid.service.GrobidRestService)
+    GET     /api/version (org.grobid.service.GrobidRestService)
+
+INFO  [2021-02-23 09:46:13,005] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@5f3f57ff{/,null,AVAILABLE}
+INFO  [2021-02-23 09:46:13,007] io.dropwizard.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2021-02-23 09:46:13,009] org.eclipse.jetty.server.handler.ContextHandler: Started i.d.j.MutableServletContextHandler@11c3ce6a{/,null,AVAILABLE}
+INFO  [2021-02-23 09:46:13,013] org.eclipse.jetty.server.AbstractConnector: Started application@70f148dc{HTTP/1.1,[http/1.1]}{0.0.0.0:8070}
+INFO  [2021-02-23 09:46:13,014] org.eclipse.jetty.server.AbstractConnector: Started admin@3360283{HTTP/1.1,[http/1.1]}{0.0.0.0:8071}
+INFO  [2021-02-23 09:46:13,015] org.eclipse.jetty.server.Server: Started @1571ms
+INFO  [2021-02-23 10:05:40,418] org.grobid.core.jni.WapitiModel: Loading model: /mnt/local/pip_stuff/grobid-0.5.5/grobid-home/models/affiliation-address/model.wapiti (size: 2700194)
+INFO  [2021-02-23 10:05:40,545] org.grobid.core.jni.WapitiModel: Loading model: /mnt/local/pip_stuff/grobid-0.5.5/grobid-home/models/name/header/model.wapiti (size: 2225578)
+INFO  [2021-02-23 10:05:40,651] org.grobid.core.jni.WapitiModel: Loading model: /mnt/local/pip_stuff/grobid-0.5.5/grobid-home/models/name/citation/model.wapiti (size: 436519)
+INFO  [2021-02-23 10:05:40,670] org.grobid.core.jni.WapitiModel: Loading model: /mnt/local/pip_stuff/grobid-0.5.5/grobid-home/models/header/model.wapiti (size: 36094028)
+INFO  [2021-02-23 10:05:42,856] org.grobid.core.jni.WapitiModel: Loading model: /mnt/local/pip_stuff/grobid-0.5.5/grobid-home/models/date/model.wapiti (size: 102435)
+INFO  [2021-02-23 10:05:42,860] org.grobid.core.jni.WapitiModel: Loading model: /mnt/local/pip_stuff/grobid-0.5.5/grobid-home/models/citation/model.wapiti (size: 16235248)
+INFO  [2021-02-23 10:05:43,714] org.grobid.core.jni.WapitiModel: Loading model: /mnt/local/pip_stuff/grobid-0.5.5/grobid-home/models/fulltext/model.wapiti (size: 21734019)
+INFO  [2021-02-23 10:05:44,883] org.grobid.core.jni.WapitiModel: Loading model: /mnt/local/pip_stuff/grobid-0.5.5/grobid-home/models/segmentation/model.wapiti (size: 16788068)
+INFO  [2021-02-23 10:05:45,878] org.grobid.core.jni.WapitiModel: Loading model: /mnt/local/pip_stuff/grobid-0.5.5/grobid-home/models/reference-segmenter/model.wapiti (size: 4921245)
+INFO  [2021-02-23 10:05:46,101] org.grobid.core.jni.WapitiModel: Loading model: /mnt/local/pip_stuff/grobid-0.5.5/grobid-home/models/figure/model.wapiti (size: 695735)
+INFO  [2021-02-23 10:05:46,127] org.grobid.core.jni.WapitiModel: Loading model: /mnt/local/pip_stuff/grobid-0.5.5/grobid-home/models/table/model.wapiti (size: 1364953)
+INFO  [2021-02-23 10:05:46,183] org.grobid.core.factory.GrobidPoolingFactory: Number of Engines in pool active/max: 1/10
+INFO  [2021-02-23 10:05:59,984] org.grobid.core.factory.GrobidPoolingFactory: Number of Engines in pool active/max: 1/10
+INFO  [2021-02-23 17:55:36,529] org.eclipse.jetty.server.AbstractConnector: Stopped application@70f148dc{HTTP/1.1,[http/1.1]}{0.0.0.0:8070}
+INFO  [2021-02-23 17:55:36,531] org.eclipse.jetty.server.AbstractConnector: Stopped admin@3360283{HTTP/1.1,[http/1.1]}{0.0.0.0:8071}
+INFO  [2021-02-23 17:55:36,532] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@11c3ce6a{/,null,UNAVAILABLE}
+INFO  [2021-02-23 17:55:36,537] org.eclipse.jetty.server.handler.ContextHandler: Stopped i.d.j.MutableServletContextHandler@5f3f57ff{/,null,UNAVAILABLE}

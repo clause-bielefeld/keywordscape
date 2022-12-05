@@ -10,7 +10,7 @@ KeywordScape - Visual Document Exploration using Contextualized Keyword Embeddin
 
 ## Demo Setup
 1. Clone Repository
-2. cd into docker/emnlp_demo/src/
+2. cd into docker/src/
 3. execute: docker-compose up --build 
 4. open localhost:8080/keywordscape_playground in browser
 
