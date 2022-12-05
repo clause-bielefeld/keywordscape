@@ -1,0 +1,234 @@
+/* Following tutorial from here: https://www.youtube.com/watch?v=owEHlDn0JYQ&t=293s */
+
+/* GOOGLE FONTS IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*===== CSS VARIABLES =====*/
+:root {
+  --header-height: 3rem;
+  --nav-width: 400px;
+
+  /*===== Font weight =====*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*===== Colors =====*/
+  --first-color: #cc482c;
+  --first-color-dark: #662616;
+  --first-color-darken: #290f09;
+  --text-color: #54423d;
+  --first-color-light: #eae7e6;
+  --first-color-lighten: #fffafa;
+
+  /*===== Font and typography =====*/
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*===== Margins =====*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+
+  /*===== z-index =====*/
+  --z-fixed: 100;
+}
+
+/*===== BASE CLASSES =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  background-color: var(--first-color-lighten);
+  color: var(--text-color);
+  line-height: 1.6;
+  /*make body fill out the whole document*/
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+/*===== MEDIA QUERIES =====*/
+/*=== TABLET SCREEN SCREEN ===*/
+@media screen and (min-width: 768px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+/*=== BIG SCREEN ===*/
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0;
+    padding-left: var(--nav-width);
+  }
+}
+
+/*=== Visualization Styling ===*/
+
+circle.dot {
+  fill: black;
+  stroke: none;
+}
+
+path.base-map-cell {
+  fill: #e8eaed; 
+  stroke: black;
+  stroke-width: 0.1; 
+}
+
+path.topic-map-cell {
+  fill: white;  
+  fill-opacity: 0.0;
+  stroke:#65696e;
+  stroke-width: 0.5;
+}
+
+path.cell-selected {
+  fill: red;
+}
+path.cell-neighbor {
+  fill: yellow;
+}
+
+line.triangle-edge {
+  stroke: black;
+  stroke-width: 0.5;
+}
+
+path.rounded-land {
+  stroke: none;
+}
+path.land-contour {
+  fill: none;
+  stroke: lightgray;
+  stroke-width: 0.5;
+}
+
+path.rounded-bordered-land {
+  stroke: lightgray;
+  stroke-width: 0.1;
+}
+
+.label--top {
+  font-family: "Arial";
+  font: 11px sans-serif;
+  text-anchor: middle;
+  fill: #333333;
+}
+
+.label--right {
+  font-family: "Arial";
+  font: 11px sans-serif;
+  text-anchor: start;
+  fill: #333333;
+}
+
+.label--bottom {
+  font-family: "Arial";
+  font: 11px sans-serif;
+  text-anchor: middle;
+  fill: #333333;
+}
+
+.label--left {
+  font-family: "Arial";
+  font: 11px sans-serif;
+  text-anchor: end;
+  fill: #333333;
+}
+
+.set_1_element {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear, opacity 0.2s ease;
+}
+
+.set_2_element {
+  visibility: hidden;
+}
+
+.set_1_2_union_element {
+  visibility: hidden;
+}
+
+.set_1_2_intersection_element {
+  visibility: hidden;
+}
+
+.point {
+  stroke: #ccc;
+  stroke-width: .5px;
+  fill: none;
+}
+
+#svg_container {
+  position: absolute;
+  /* visibility: visible; */
+  opacity: 1.0;
+}
+
+#canvas_container{
+  position: absolute;
+  /* visibility: hidden; */
+  /* opacity: 0.5; */
+}
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 20;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  display: none;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

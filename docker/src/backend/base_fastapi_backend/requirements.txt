@@ -1,0 +1,10 @@
+# requirements without version specified
+fastapi
+uvicorn[standard]
+jinja2
+aiohttp
+aiofiles
+inject
+
+#requirements with version specified 
+py2neo==2020.0.0

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KeywordScape Playground</title>
+    <!--LOAD SINGLE PAGE KEYWORDSCAPE PLAYGROUND STYLE CSS -->
+    <link
+      rel="stylesheet"
+      href="/static/ui/pages/web_pages/playgrounds/keywordscape_playground/keywordscape_playground.css"
+    />
+    <!--LOAD WEB COMPONENTS -->
+    <script
+      src="/static/ui/utils/components/page_components/search_navigation_component/search_navigation_component.js"
+      type="module"
+    ></script>
+
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://unpkg.com/d3-geo-voronoi@1.6.0/dist/d3-geo-voronoi.min.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v3.min.js"></script>
+    <script src="https://unpkg.com/array-blur"></script>
+    <script src="https://unpkg.com/d3-tricontour@0.1.0"></script>
+    <script src="https://unpkg.com/d3-geo-zoom"></script>
+    <!-- <script src="https://d3js.org/d3-hierarchy.v2.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.js"></script> -->
+    <script
+      src="static/ui/pages/web_pages/playgrounds/keywordscape_playground/keywordscape_playground.js"
+      type="module"
+    ></script>
+  </head>
+  <body>
+    <!-- APP INTERFACE -->
+    <!--NAVIGATION DRAWER -->
+    <search-navigation-component></search-navigation-component>
+    <!--VIEWS -->
+    <div id="main_view">
+      <!-- <div id="loader"></div> -->
+      <svg id="svg_container"></svg>
+      <canvas id="canvas_container"></canvas>
+    </div>
+  </body>
+</html>
