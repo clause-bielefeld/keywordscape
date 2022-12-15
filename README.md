@@ -14,9 +14,11 @@ KeywordScape - Visual Document Exploration using Contextualized Keyword Embeddin
 3. Parse PDFs to JSON using allenai science-parse lib (run cell 13)
 4. Clean Corpus (run cell 14)
 5. Create Maps (run cell 15)
-6. System exported 3 files named as: interactive_document_corpus_base_map_points_file_path, interactive_document_corpus_corpus_points_file_path, interactive_document_corpus_topic_corpus_file_path
+6. System exported 3 map files named as: interactive_document_corpus_base_map_points_file_path, interactive_document_corpus_corpus_points_file_path, interactive_document_corpus_topic_corpus_file_path
 7. Copy Files into directory: keywordscape/docker/src/backend/base_fastapi_backend/src/web_frontend/ui/pages/web_pages/playgrounds/keywordscape_playground/assets/
-8. 
+8. Import 3 map files in keywordscape_playground.js
+9. Rebuild application by using: docker-compose up --build
+10. Open localhost:8080/keywordscape_playground in browser
 
 
 ## Demo Setup
